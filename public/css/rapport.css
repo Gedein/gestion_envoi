@@ -1,0 +1,30 @@
+
+#text2{
+    background-color: transparent;
+    margin-left: 20%;
+    margin-top: 60px;
+    color: white;
+   
+}
+#ac1{
+    margin-top: 80px;
+    margin-left: 570px;
+    color: #118739;
+}
+#ac3{
+    color: white;
+    margin-top: -58px;
+    margin-left: 700px;
+}
+.line{
+	height: 1px;
+	background:rgb(4 120 87) ;
+	width: 250px;
+	height: 10px;
+	margin: auto;
+	border-radius: 25px;
+     margin-top: 15px;
+     margin-left: 560px;
+
+  }
+

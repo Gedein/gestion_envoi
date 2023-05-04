@@ -1,0 +1,141 @@
+
+input{
+	border-radius: 5px;
+	width: 150px;
+	color: white;
+  }
+  #input2
+  {
+	 margin-top: 10px;
+	 width: 320px;
+  }
+  
+  #input1
+  {
+	 margin-top: 20px;
+	 width: 320px;
+	
+  }
+  #input3
+  {
+	 margin-top: 5px;
+	 width: 320px;
+	
+  }
+  #input4
+  {
+	 margin-top: 5px;
+	 width: 320px;
+	
+  }
+  #input5
+  {
+	 margin-top: 5px;
+	 width: 320px;
+	
+  }
+
+  
+  form input[type="text"],form input[type="date"]
+{
+  border: none;
+  border-bottom: 3px solid rgb(4 120 87);
+  background-color: transparent;
+  outline: none;
+  height: 60px;
+  display: 20px;
+  color: rgb(4 120 87);
+}
+input::placeholder
+{
+  color:#118739;
+}
+#btn{
+	border-radius: 50px;
+  margin-top: 60px;
+  margin-bottom: 10px;
+  
+}
+
+#div2{
+	height: 100px;
+opacity: 0.5;
+background-color: #118739;
+height: calc(var(--heading-height) + 10em);
+	z-index: -1;
+	transform: skewY(-3.5deg);
+	height: 150px;
+  margin-left: -10px;
+	margin-right: -10px;
+	
+	
+}
+
+
+.div3{
+	background-color: #118739;
+	height: 80px;
+	opacity: 0.7;
+  margin-left: -10px;
+	margin-right: -10px;
+    margin-bottom: -10px;
+}
+.text-black{
+	align-content: center;
+}
+.fm{
+	background-color: rgb(203 213 225);
+	margin: 5% auto;width: 550px;
+  height: 600px;
+  border-radius: 25px;
+  opacity: 0.7;
+}
+
+#con1{
+	margin-bottom: 20px;
+	color: rgb(4 120 87);
+}
+
+#cnt_v{
+	margin-bottom: 100px;
+	color: white;
+  margin-left: 100px;
+}
+.line-1 {
+	height: 1px;
+	background:rgb(4 120 87) ;
+	width: 250px;
+	height: 10px;
+	margin: auto;
+	border-radius: 25px;
+
+  }
+  #btn2{
+    border-radius: 50px;
+  margin-top: 60px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  }
+  #bd{
+    background-color: rgb(226 232 240);
+      }
+      #btn {
+        background-color:#118739;
+        transition: all .2s ease-in-out;
+        border-color:rgb(226 232 240) ;
+        
+        }
+        #btn:hover { transform: scale(1.1)
+        ; 
+        background-color:  rgb(4 120 87);;
+      }
+      #btn2{
+        background-color:#118739;
+        transition: all .2s ease-in-out;
+        border-color:rgb(226 232 240) ;
+        
+        }
+        #btn2:hover { transform: scale(1.1)
+        ; 
+        background-color:  rgb(4 120 87);;
+      }

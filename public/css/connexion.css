@@ -1,0 +1,174 @@
+.div1
+{
+	width: 500px;
+	height: 350px;
+	margin: 10% auto;
+}
+input{
+	border-radius: 5px;
+	width: 150px;
+	color:white;
+  }
+  
+  #password
+  {
+	 margin-top: 20px;
+	 width: 320px;
+	 margin-left: 100px;
+  }
+  
+  #email
+  {
+	 margin-top: 10px;
+	 width: 320px;
+	 margin-left: 100px;
+	
+  }
+  form input[type="text"],form input[type="password"],form input[type="email"] 
+{
+  border: none;
+  border-bottom: 3px solid rgb(4 120 87);
+  background-color: transparent;
+  outline: none;
+  height: 60px;
+  display: 20px;
+  color: rgb(4 120 87);
+}
+input::placeholder
+{
+  color:#118739;
+}
+
+
+#div2{
+	height: 100px;
+opacity: 0.5;
+background-color: #118739;
+height: calc(var(--heading-height) + 10em);
+	z-index: -1;
+	transform: skewY(-3.5deg);
+	height: 150px;
+	margin-right: -10px;
+	margin-top: -50px;
+	margin-left: -10px;
+	
+	
+}
+
+
+.div3{
+	background-color: #118739;
+	height: 100px;
+	opacity: 0.7;
+	margin-left: -10px;
+	margin-right: -10px;
+	margin-bottom: -10px;
+	
+
+}
+.text-black{
+	align-content: center;
+}
+.fm{
+	background-color: rgb(203 213 225);
+	margin: 5% auto;width: 550px;
+  height: 450px;
+  border-radius: 25px;
+  opacity: 0.7;
+}
+
+#con1{
+	margin-bottom: 20px;
+	color: rgb(4 120 87);
+	margin-left: 200px;
+}
+
+#cnt_v{
+	margin-bottom: 100px;
+	color: white;
+
+}
+.line-1 {
+	height: 1px;
+	background:rgb(4 120 87) ;
+	width: 200px;
+	height: 10px;
+	margin: auto;
+	border-radius: 25px;
+
+  }
+  #head{
+	background-color: rgb(226 232 240);;
+
+  }
+  #bd{
+background-color: rgb(226 232 240);
+  }
+  
+  #btn {
+	background-color:#118739;
+	transition: all .2s ease-in-out;
+	border-color:rgb(226 232 240) ;
+	
+		border-radius: 50px;
+	  margin-top: 60px;
+	  margin-bottom: 10px;
+	  margin-left: 150px;
+	  width: 90px;
+	  
+	
+	
+  }
+  #btn2{
+	background-color:#118739;
+	transition: all .2s ease-in-out;
+	border-color:rgb(226 232 240) ;
+	color:black;
+	
+		border-radius: 50px;
+	  margin-top: 60px;
+	  margin-bottom: 10px;
+	  margin-left: 50px;
+	  width: 100px;
+	  
+	
+	
+  }
+  #btn:hover { transform: scale(1.1)
+	; 
+	background-color:  rgb(4 120 87);;
+}
+#btn2:hover { transform: scale(1.1)
+	; 
+	background-color:  rgb(4 120 87);;
+}
+#password-confirm{
+	margin-top: 20px;
+	 width: 320px;
+	 margin-left: 100px;
+}
+#name{
+	margin-top: 20px;
+	 width: 320px;
+	 margin-left: 100px;
+}
+#btn3 {
+	background-color:#118739;
+	transition: all .2s ease-in-out;
+	border-color:rgb(226 232 240) ;
+	
+		border-radius: 50px;
+	  margin-top: 60px;
+	  margin-bottom: 10px;
+	  margin-left: 200px;
+	  width: 90px;
+	  
+	
+	
+  }
+  #btn3:hover { transform: scale(1.1)
+	; 
+	background-color:  rgb(4 120 87);;
+}
+
+  
