@@ -41,3 +41,6 @@ services:
       - ./docker-compose/mysql:/docker-entrypoint-initdb.d
     networks:
       - gestion
+  networks:
+  gestion:
+    driver: bridge
