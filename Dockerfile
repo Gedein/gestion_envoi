@@ -1,5 +1,10 @@
 FROM php:8.0-fpm
 
+WORKDIR /var/www
+RUN apt-get update && apt-get install -y libmcrypt-dev mysql-client && docker-php-ext-install mcrypt pdo_mysql
+ADD . /var/www
+RUN chown -R www-data:www-data /var/www
+
 # Arguments defined in docker-compose.yml
 ARG user
 ARG uid
