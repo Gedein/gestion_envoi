@@ -21,7 +21,7 @@ Route::get('/', function () {
 });
 */
 Route::get('/accueil',[CompteControl::class,'homepage']) ->name('accueil');
-Route::get('/ajouter',[CompteControl::class,'addaccount'])->name('ajouter')->middleware('auth');
+Route::get('/ajouter',[CompteControl::class,'addaccount'])->name('ajouter');
 Route::post('/ajouter',[CompteControl::class,'storeaccount'])-> name('account.store');
 Route::post('/debit',[CompteControl::class,'debitercompt'])-> name('account.debit')->middleware('auth');
 Route::get('/credit/{id}',[CompteControl::class,'crediter']) ->name('credit')->middleware('auth');
