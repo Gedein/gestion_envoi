@@ -24,7 +24,7 @@ RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd
 # Install nojejs 
 RUN curl -sL https://deb.nodesource.com/setup_11.x  | bash -
 RUN apt-get -y install nodejs
-RUN npm install
+RUN apt install -y npm
 
 # Get latest Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
