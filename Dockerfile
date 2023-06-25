@@ -1,5 +1,5 @@
 FROM php:8.0-fpm
-FROM node:8.2
+
 
 
 
