@@ -16,9 +16,6 @@ RUN apt-get update && apt-get install -y \
     libxml2-dev \
     zip \
     unzip
-RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-unzip awscliv2.zip
-RUN ./aws/install
 
 # Clear cache
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
