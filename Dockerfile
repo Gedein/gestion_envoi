@@ -25,7 +25,7 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd
 #aws cli
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-RUN ./aws/install
+RUN ./aws/install -i /usr/local/aws-cli -b /usr/local/bin
 # Get latest Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
