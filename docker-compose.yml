@@ -24,7 +24,7 @@ services:
     networks:
       - gestion
   db:
-    image: mysql:alpine
+    image: mysql
     container_name: gestion_envoi-db
     restart: unless-stopped
     environment:
