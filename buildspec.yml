@@ -3,6 +3,9 @@ phases:
   pre_build:
     commands:
       - echo prebuild stage
+      - docker info
+      - docker version
+      - docker compose version
       
   build:
     commands:
