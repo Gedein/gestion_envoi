@@ -1,0 +1,60 @@
+pipeline {
+    agent any
+    
+    environment {
+    DOCKERHUB_CREDENTIALS = credentials('dockerhub')
+      }
+    stages {
+        stage('verification php  et php unit') {
+            steps {
+               sh'php --version'
+                
+            }
+        }
+         stage('verification Docker') {
+            steps {
+                sh """
+                docker info
+                docker version
+                docker compose version
+                curl --version
+                """
+            }
+        }
+        stage('checkout') {
+            steps {
+                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/anemfadilath/gestion_envoi.git']])
+            }
+        }
+        stage('prune le systeme') {
+            steps {
+               
+               sh 'docker system prune -af'
+               
+            }
+        }
+        stage('Login') {
+            steps {
+                 sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
+                }
+        }
+        stage('build and deploy'){
+            steps{
+                 
+                  sh 'docker compose up -d'
+                  sh 'docker ps'
+                  sh 'docker images'
+                  sh'docker image tag gestion_envoi anemfadilath/gestion_envoi:gestion'
+                  sh'docker image tag mysql:5.7 anemfadilath/gestion_envoi:mysql5.7'
+                  sh'docker image tag nginx:alpine anemfadilath/gestion_envoi:alpinelatest'
+                  sh 'docker images'
+                  sh 'docker image push --all-tags anemfadilath/gestion_envoi'
+                  sh 'docker compose exec app ls -l'
+                  sh 'docker compose exec app chmod -R 777 /var/www/storage'
+                  sh 'docker compose exec app composer install'
+                  sh 'docker compose exec app php artisan key:generate'
+        }
+        }
+    
+}
+}
