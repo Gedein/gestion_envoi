@@ -2,7 +2,7 @@ version: "3.7"
 services:
   app:
     build:
-      context: ./
+      context: ./gestion
       dockerfile: Dockerfile
     image: gestion_envoi
     container_name: gestion_envoi
