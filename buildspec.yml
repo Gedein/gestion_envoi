@@ -9,7 +9,7 @@ phases:
       
   build:
     commands:
-      - docker build docker-compose.yml
+      - docker build 
   post_build:
     commands:
       - echo build end
