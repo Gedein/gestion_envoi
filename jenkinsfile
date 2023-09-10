@@ -61,7 +61,7 @@ pipeline {
             steps{
                   withAWS(region:'ue-west-3',credentials: 'awsbs') {
             // Transfert de Dockerrun.aws.json vers S3
-                sh 'aws s3 cp Dockerrun.aws.json s3://bucket-gestion-envoi-s3/Dockerrun.aws.json'
+                sh 'aws s3 cp Dockerrun.aws.json s3://bucket-gestion-envoi/Dockerrun.aws.json'
 
             // Créez une nouvelle version de l'application Elastic Beanstalk
                sh 'aws elasticbeanstalk create-application-version --application-name GestionEnvoi --version-label v${BUILD_NUMBER} --source-bundle S3Bucket=bucket-gestion-envoi,S3Key=Dockerrun.aws.json'
