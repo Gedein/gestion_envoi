@@ -59,9 +59,9 @@ pipeline {
 
         stage('deploy'){
             steps{
-                  withAWS(credentials: 'awsbs') {
+                  withAWS(region:'ue-west-3',credentials: 'awsbs') {
             // Transfert de Dockerrun.aws.json vers S3
-                sh 'aws s3 create-bucket --bucket bucket-gestion-envoi-s3 --region ue-west-3'
+                sh 'aws s3 create-bucket --bucket bucket-gestion-envoi-s3 ue-west-3'
                 sh 'aws s3 cp Dockerrun.aws.json s3://bucket-gestion-envoi-s3/Dockerrun.aws.json'
 
             // Créez une nouvelle version de l'application Elastic Beanstalk
