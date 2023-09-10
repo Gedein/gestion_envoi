@@ -43,12 +43,9 @@ pipeline {
             steps{
                  
                   sh 'docker compose up -d'
-                  sh 'docker ps'
-                  sh 'docker images'
                   sh'docker image tag gestion_envoi gedeonsteve/gestionenvoi:gestionenvoi'
                   sh'docker image tag mysql:5.7 gedeonsteve/gestionenvoi:mysql5.7'
                   sh'docker image tag nginx:alpine gedeonsteve/gestionenvoi:alpinelatest'
-                  sh 'docker images'
                   sh 'docker image push --all-tags gedeonsteve/gestionenvoi'
                   sh 'docker compose exec app ls -l'
                   sh 'docker compose exec app chmod -R 777 /var/www/storage'
