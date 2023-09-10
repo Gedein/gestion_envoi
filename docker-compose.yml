@@ -28,12 +28,11 @@ services:
     container_name: gestion_envoi-db
     restart: unless-stopped
     environment:
-      MYSQL_DATABASE: compte
-      MYSQL_ROOT_PASSWORD: 
+      MYSQL_DATABASE: ""
       MYSQL_PASSWORD: 
       MYSQL_USER: root
-      SERVICE_TAGS: dev
-      SERVICE_NAME: mysql
+    ports:
+      - '3306:3306'
     volumes:
       - ./docker-compose/mysql:/docker-entrypoint-initdb.d
     networks:
