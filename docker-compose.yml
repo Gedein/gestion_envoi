@@ -28,7 +28,7 @@ services:
     container_name: gestion_envoi-db
     restart: unless-stopped
     environment:
-     MYSQL_DATABASE: mydb
+      MYSQL_DATABASE: mydb
       MYSQL_ROOT_PASSWORD: root
       MYSQL_PASSWORD: root
       MYSQL_USER: root
