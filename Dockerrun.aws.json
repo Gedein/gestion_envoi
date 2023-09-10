@@ -3,31 +3,31 @@
     "containerDefinitions": [
         {
             "name": "app",
-            "image": "anemfadilath/gestion_envoi:gestion",
+            "image": "gedeonsteve/gestionenvoi:gestion",
             "essential": true,
             "memory": 256,
             "portMappings": [
                 {
-                    "containerPort": 80,
-                    "hostPort": 80
+                    "containerPort": 9000,
+                    "hostPort": 9000
                 }
             ]
         },
         {
             "name": "nginx",
-            "image": "anemfadilath/gestion_envoi:alpinelatest",
+            "image": "gedeonsteve/gestionnvoi:alpinelatest",
             "essential": true,
             "memory": 128,
             "portMappings": [
                 {
-                    "containerPort": 80,
+                    "containerPort": 8005,
                     "hostPort": 80
                 }
             ]
         },
         {
             "name": "db",
-            "image": "anemfadilath/gestion_envoi:mysql5.7",
+            "image": "gedeonsteve/gestionenvoi:mysql5.7",
             "essential": true,
             "memory": 512,
             "portMappings": [
