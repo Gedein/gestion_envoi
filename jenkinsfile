@@ -62,7 +62,7 @@ pipeline {
                sh 'aws elasticbeanstalk create-application-version --application-name GestionEnvoi --version-label v${BUILD_NUMBER} --source-bundle S3Bucket=bucket-gestion-envoi,S3Key=Dockerrun.aws.json'
 
             // Mettez à jour l'environnement Elastic Beanstalk avec la nouvelle version
-               sh 'aws elasticbeanstalk update-environment --application-name GestionEnvoi --environment-name NomDeLEnvironnement --version-label v${BUILD_NUMBER}'}
+               sh 'aws elasticbeanstalk update-environment --application-name GestionEnvoi --environment-name GestionEnvoi-env --version-label v${BUILD_NUMBER}'}
         
             }
     
