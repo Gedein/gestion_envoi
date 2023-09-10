@@ -29,7 +29,7 @@ pipeline {
         stage('prune le systeme') {
             steps {
                
-               //sh 'docker system prune -af'
+               sh 'docker ps'
                
             }
         }
