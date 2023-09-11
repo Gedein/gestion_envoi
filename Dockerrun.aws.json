@@ -3,7 +3,7 @@
     "containerDefinitions": [
         {
             "name": "app",
-            "image": "gedeonsteve/gestionenvoi:gestion",
+            "image": "gedeonsteve/gestionenvoi:gestionenvoi",
             "essential": true,
             "memory": 256,
             "portMappings": [
@@ -15,7 +15,7 @@
         },
         {
             "name": "nginx",
-            "image": "gedeonsteve/gestionnvoi:alpinelatest",
+            "image": "gedeonsteve/gestionenvoi:alpinelatest",
             "essential": true,
             "memory": 128,
             "portMappings": [
