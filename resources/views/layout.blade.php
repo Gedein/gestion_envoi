@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <h3>Estiam</h3> 
+  <h2>CIMETRIX</h2> 
 </head>
 <title> @yield('title')</title>
     </div>
