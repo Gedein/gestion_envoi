@@ -6,13 +6,13 @@ pipeline {
     AWS_CREDENTIALS = credentials('awsbs') 
       }
     stages {
-        stage('verification php  et php unit') {
+        stage('check Php') {
             steps {
                sh'php --version'
                 
             }
         }
-         stage('verification Docker') {
+         stage('check Docker') {
             steps {
                 sh """
                 docker info
@@ -22,24 +22,24 @@ pipeline {
                 """
             }
         }
-        stage('checkout') {
+        stage('checkout branch') {
             steps {
                 checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Gedein/gestion_envoi.git']])
             }
         }
-        stage('prune le systeme') {
+        stage('test') {
             steps {
                
                sh 'docker ps'
                
             }
         }
-        stage('Login') {
+        stage('Login repo') {
             steps {
                  sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
                 }
         }
-        stage('build'){
+        stage('build & push artefact -> repo'){
             steps{
                  
                   sh 'docker compose up -d'
