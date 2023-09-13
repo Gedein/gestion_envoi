@@ -39,7 +39,7 @@ pipeline {
                  sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
                 }
         }
-        stage('build and deploy'){
+        stage('build'){
             steps{
                  
                   sh 'docker compose up -d'
@@ -62,7 +62,7 @@ pipeline {
                sh 'aws elasticbeanstalk create-application-version --application-name GestionEnvoi --version-label v${BUILD_NUMBER} --source-bundle S3Bucket=bucket-gestion-envoi,S3Key=Dockerrun.aws.json'
 
             // Mettez à jour l'environnement Elastic Beanstalk avec la nouvelle version
-               sh 'aws elasticbeanstalk update-environment --application-name GestionEnvoi --environment-name GestionEnvoi-env --version-label v${BUILD_NUMBER}'}
+               sh 'aws elasticbeanstalk update-environment --application-name GestionEnvoi --environment-name GestionEnvoi-env-1 --version-label v${BUILD_NUMBER}'}
         
             }
     
