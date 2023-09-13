@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <h5>nom de l'entreprise</h5> 
+  <h3>Estiam</h3> 
 </head>
 <title> @yield('title')</title>
     </div>
