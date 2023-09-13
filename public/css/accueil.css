@@ -1,7 +1,7 @@
 #div2{
 	
 opacity: 0.5;
-background-color: #118739;
+background-color: #332564;
 height: calc(var(--heading-height) + 10em);
 	z-index: -1;
 	transform: skewY(-3deg);
